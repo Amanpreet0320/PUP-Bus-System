@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F6FC">
+
+    <!-- Larger pastel header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:background="#E9E2FF"
+        android:elevation="3dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="14dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Emergency Notice"
+            android:textColor="#30284A"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Publish an Important Notice"
+                android:textColor="#30284A"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share important bus service updates with students."
+                android:textColor="#68627A"
+                android:textSize="17sp"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Notice title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notice Title"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#30284A"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:hint="Example: Buses Cancelled"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="18dp"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:inputType="textCapSentences"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Notice message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notice Message"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#30284A"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:hint="Write the full message that all students will see..."
+                android:background="@drawable/bg_edittext"
+                android:padding="18dp"
+                android:gravity="top|start"
+                android:textSize="18sp"
+                android:inputType="textMultiLine|textCapSentences"
+                android:layout_marginBottom="30dp" />
+
+            <!-- Larger post button -->
+            <Button
+                android:id="@+id/btnPost"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:text="POST EMERGENCY NOTICE"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#B32632" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
